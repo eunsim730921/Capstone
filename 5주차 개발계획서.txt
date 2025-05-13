@@ -22,7 +22,7 @@ public:
     // 출석 점수
     double attendance() const {
         int total_absent = absent + (tardy / 3);//지각 3회마다 결석 1회 추가
-        double score = 10 - (total_absent + (tardy % 3) * 0.2);//남은 지각은 1회당 0.2점 감점-----------------------------
+        double score = 10 - (total_absent + (tardy % 3) * 0.2);//남은 지각은 1회당 0.2점 감점
         return max(0.0, score);
     }
     //최종 점수 계산:중간고사40%,기말고사50%,출석 점수10점
